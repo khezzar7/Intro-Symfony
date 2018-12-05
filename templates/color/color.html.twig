@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>color</title>
+    <style media="screen">
+      .rectangle{
+        width: {{width}}px;
+        height: {{height}}px;
+        background-color: {{color}};
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    Couleur: {{color}}
+    Nombre : {{number}}
+    {% if number > 10 %}
+      <p>Impossible de traiter la demande</p>
+    </div>
+    {% else %}
+    {% for i in 1.. number %}
+    <div class="rectangle"></div>
+    {% endfor %}
+    {% endif %}
+
+  </body>
+</html>

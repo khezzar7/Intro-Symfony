@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Application Symfony Intro | {% block title %}{% endblock %}</title>
+        <!--lien externe vers bootstrap-->
+        <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    </head>
+    <body>
+      <header>
+        <nav class="bg-dark" >
+          <ul>
+            <li>
+              <a href="/">Accueil</a>
+            </li>
+            <li>
+              <a href="/color/add">Ajout couleur</a>
+            </li>
+            <li>
+              <a href="{{path('country')}}">Pays</a>
+            </li>
+            <li>
+              <a href="{{path('topic')}}">Topics</a>
+            </li>
+            <li>
+              <a href="{{path('proverb_show')}}">Proverbes</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+        {% block body %} {% endblock %}
+
+
+      {% block js %}{% endblock %}
+    </body>
+</html>

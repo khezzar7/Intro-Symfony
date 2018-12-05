@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<div class="container">
+  <div class="col-8">
+    <a class="btn btn-primary" href="{{path('proverb_add')}}">Ajouter un proverbe</a>
+
+
+  </div>
+{% for proverb in proverbs %}
+
+
+    <div class="proverb">
+      <header class="topic"><strong>Topic(s):</strong>{% for topic in proverb.topic %}
+          {{topic.name}}&nbsp;
+        {% endfor %}</header>
+    {{proverb.body}}
+
+    <footer class="country">
+    Proverbe: {{proverb.country.adjective}}
+    </footer>
+    </div>
+
+
+
+
+  {% endfor %}
+</div>
+{% endblock %}

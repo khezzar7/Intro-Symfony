@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <title>{{ title }}</title>
+
+ <link rel="stylesheet" href="style.css">
+
+ <script src="script.js"></script>
+
+</head>
+
+<body>
+  <h1>{{title}}</h1>
+
+  {% for color in colors %}
+    <p>{{ color }}</p>
+  {% endfor %}
+
+  {% for color in colorsDict %}
+    {% if color.active %}
+    <div style="background-color:{{color.en}}">
+    {{ color.fr }}
+    </div>
+    {% else %}
+    <section>Couleur inactive..</section>
+    {% endif %}
+  {% endfor %}
+
+
+  <script>
+    console.log('JS ok');
+  </script>
+</body>
+
+</html>
